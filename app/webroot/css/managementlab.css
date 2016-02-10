@@ -40,3 +40,14 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+.completo {
+	text-decoration: line-through;
+	color: silver;
+}
+
+.starred {
+    color: orange;
+    font-size: 1.5em;
+}
+

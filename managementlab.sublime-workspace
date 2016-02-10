@@ -43,14 +43,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/massimoi/Documents/Html/itaway/app/views/themed/langhe.itaway.eu/poi/view.ctp",
-			"settings":
-			{
-				"buffer_size": 8564,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -109,6 +101,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/massimoi/Documents/Html/itaway/app/views/themed/langhe.itaway.eu/percorsi/index.ctp",
+		"/C/Users/massimoi/Documents/Html/itaway/app/views/themed/langhe.itaway.eu/poi/view.ctp",
 		"/C/Users/massimoi/Documents/Html/itaway/app/views/poi/view.ctp",
 		"/C/Users/massimoi/Documents/Html/igas/View/Persone/index.ctp",
 		"/C/Users/massimoi/Documents/Html/managementlab/app/Controller/TasksController.php",
@@ -169,39 +163,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/massimoi/Documents/Html/itaway/app/views/themed/langhe.itaway.eu/poi/view.ctp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8564,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2058,
-								2058
-							]
-						],
-						"settings":
-						{
-							"function_name_status_row": 52,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 650.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

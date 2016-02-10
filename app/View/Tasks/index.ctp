@@ -23,13 +23,18 @@
 <?php
 		//Il controller mi passa una variabile $tasks perchè ho fatto $this->set('tasks'....)		
 		foreach($p['Task'] as $t):	
+                $extraclass= '';                        
+                if ($t['complete'])
+                {
+                    $extraclass = ' completo';
+                }                        
 ?>		
-		<tr>
+		<tr class="<?php echo $extraclass ?>">
 			<td><?php if (isset($t['complete']) )
 					  {
 						echo $this->Form->checkbox('Task.complete',
 							array('default' => $t['complete'],
-								   'class'=>'finish',
+								   'class'=>'finish ',
 								   'task_id' => $t['id'], 
 								 )
 							);						
@@ -38,7 +43,21 @@
 			</td>
 			<td><?php if (isset($t['name']) )
 					  {
-				?>
+                ?>                    
+                    <?php 
+                    //Metto la stellina piena o vuota a seconda del campo starred
+                    if ($t['starred'])
+                    {
+                        $startype = 'glyphicon-star';                        
+                    }
+                    else
+                    {
+                        $startype = 'glyphicon-star-empty';
+                    }
+                    ?>                    
+                    <span class="starred glyphicon <?php echo $startype ?>" 
+                          task_id="<?php echo $t['id'] ?>">
+                    </span>&nbsp;
 					<?php	echo $t['name']  ?>
 				<?php
 					  }						

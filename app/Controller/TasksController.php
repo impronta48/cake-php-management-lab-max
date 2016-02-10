@@ -126,4 +126,23 @@ class TasksController extends AppController {
 		//Salvo il risultato
 		$this->Task->save($t);
 	}
+
+    public function star($id)
+	{
+		$this->layout='ajax';
+		$this->autoRender = false;
+
+		//Tolgo la ricorsione
+		$this->Task->recursive = -1;
+
+		//Cerco il task che mi hai passato
+		$t = $this->Task->findById($id);
+
+		//Inverto il valore di complete
+		$t['Task']['starred'] = !$t['Task']['starred'];
+		
+		//Salvo il risultato
+		return $this->Task->save($t);
+        
+	}
 }
