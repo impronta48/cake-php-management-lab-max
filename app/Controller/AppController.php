@@ -40,4 +40,5 @@ class AppController extends Controller {
         'Form' => array('className' => 'Bs3Helpers.Bs3Form'),
 		//'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),        
 	);
+    
 }

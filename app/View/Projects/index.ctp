@@ -21,6 +21,15 @@
 			<a href="<?php echo $this->Html->url('view/' . $project['Project']['id']) ?>">
 			<?php echo $project['Project']['name']; ?> 
 			</a>
+            
+            <?php 
+                    //Prima di stampare l'immagine verifico se esiste il file                    
+                    if (file_exists( ROOT. DS. APP_DIR . DS . WEBROOT_DIR . DS . 'img'  .DS . 'projects' . DS  . $project['Project']['id'] . '.jpg' ))
+                    {
+                        echo $this->Html->image('projects/' . $project['Project']['id'] . '.jpg',
+                        array('class'=>'thumbnail', 'height'=>'50px')); 
+                    };
+            ?>
   </li>
 <?php endforeach; ?>
 </ul>

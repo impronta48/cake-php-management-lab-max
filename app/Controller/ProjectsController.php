@@ -18,7 +18,15 @@ class ProjectsController extends AppController {
 		//Faccio una query con queste condizioni
 		//Estraggo l'elenco completo dei progetti
 		$p = $this->Project->find('all', array('conditions'=> $conditions));
-		$this->set('projects',$p);
+        
+        //Se mi stai chiamando da un element restituisco il valore invece 
+        //del set
+		if (!empty($this->request->params['requested'])) {
+            return $p;
+        }
+        
+        //Da qui in avanti arrivo solo se stiamo usando la view e non l'element
+        $this->set('projects',$p);
 		
 		//Conto quanti task NON completi ci sono in ogni progetto
 		//Nota: Faccio la query opposta alla logica per beccare anche i task che hanno complete=NULL
@@ -108,5 +116,8 @@ class ProjectsController extends AppController {
         $this->set('users',$users);
         $this->set('managers',$managers);
         
+        
+        //Cancello la cache per gestire l'element in home page
+        Cache::clear();
     }
 }
