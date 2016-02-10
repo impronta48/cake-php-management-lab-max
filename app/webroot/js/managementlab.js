@@ -10,7 +10,7 @@ $('document').ready(function(){
 		$.ajax({
             type: 'POST',
             url: 'http://localhost/managementlab/tasks/complete/' + $(this).attr('task_id'),            
-            cache: false,            
+            cache: false,
             success: function (html){
                 $(this).prop("checked", !$(this).prop("checked"));
             },
